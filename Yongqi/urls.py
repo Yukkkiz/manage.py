@@ -16,6 +16,8 @@ Including another URLconf
 #from django.contrib import admin
 from django.urls import include,path
 from django_web.views import index
+from django.urls import path
+from django.urls import re_path as url
 from . import testdb
 from Read import views
 from Count import views
@@ -24,9 +26,9 @@ from Visualize import views
 urlpatterns = [
    # path('admin/', admin.site.urls),
     path('',index,name="index"),
-    #path('function1/',include('left-sidebar'))
-    path('Read', include('Read.urls')),
+    url(r'^Read/', include('Read.urls')),
     path('Count', include('Count.urls')),
     path('Visualize', include('Visualize.urls')),
     path('testdb/', testdb.testdb),
+
 ]

@@ -56,8 +56,7 @@ ROOT_URLCONF = 'Yongqi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [os.path.join(BASE_DIR,'templates'),os.path.join(BASE_DIR,'Read/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,4 +129,4 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR,"static"),)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # 文件上传配置
-UPLOAD_ROOT = os.path.join(BASE_DIR,'Read')
+UPLOAD_ROOT = os.path.join(BASE_DIR,'./temp_file')

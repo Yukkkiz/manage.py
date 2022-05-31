@@ -73,12 +73,12 @@
 														</article>
 													</li>
 												</ul>
-                                                    <form id="form"  enctype="multipart/form-data" method="post">
+                                                    <form id="form"  enctype="multipart/form-data" method="post" action="{% url 'Read' %}">
                                                    {% csrf_token %}
 
 
-                                                     <p><input type="file"  name="file"></p>
-                                                        <input type="submit" onclick="display_alert()" value="    提    交    " >
+                                                     <p><input name="uploadfile" type="file"></p>
+                                                        <input type="submit" value="    提    交    " >
                                                      </form>
 											</section>
 								</div>
