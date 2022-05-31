@@ -1,0 +1,168 @@
+{% load static%}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>长视频平台用户反馈分析平台-用户反馈数目统计</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'main.css'%}" />
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="logo container">
+						<div>
+							<h1><a href="{% url 'index' %}" id="logo">BJFU</a></h1>
+							<p>长视频平台用户反馈分析平台</p>
+						</div>
+					</div>
+				</header>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'Read' %}">上传表格</a></li>
+						<li class="current"><a href="{% url 'Count' %}">用户反馈数目统计</a></li>
+						<li><a href="{% url 'Visualize' %}">用户反馈可视化</a></li>
+					</ul>
+				</nav>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-9 col-12-medium">
+								<div class="content">
+
+									<!-- Content -->
+
+										<article class="box page-content">
+
+											<header>
+												<h2>用户反馈数目统计</h2>
+												<p>Statistics on the number of user feedback</p>
+											</header>
+
+											<section>
+												<span class="image featured"><img src="{% static 'pic05.jpg' %}" alt="" /></span>
+												<h3>用户反馈数目统计功能介绍</h3>
+												<p>
+													本课题采用的是从长视频平台的反馈入口获得的用户反馈信息，作为一个平均日活跃用户数量达1.8亿的国内头部长视频平台，爱奇艺客户端每日能够收到的用户反馈可达5000+条，这些用户反馈内容形式包括长文本、短文本、图片、系统编码等，信息量大且内容繁复。
+                                                    过量的用户反馈信息会给平台产品造成消耗人力精力、难以判断问题的主次和频率等困难，本功能采用自动化方式，对用户反馈的数目和频率进行统计，输出反馈频次降序排行榜。
+
+												</p>
+                                                <a href="{% url 'Visualize' %}" class="button alt">进行反馈数目统计</a>
+											</section>
+										</article>
+
+								</div>
+							</div>
+							<div class="col-3 col-12-medium">
+								<div class="sidebar">
+
+									<!-- Sidebar -->
+
+										<!-- Recent Posts -->
+											<section>
+												<h2 class="major"><span>近期上传列表</span></h2>
+												<ul class="divided">
+													<li>
+														<article class="box post-summary">
+															<h3><a href="#">Excel-1</a></h3>
+															<ul class="meta">
+																<li class="icon fa-clock">6 hours ago</li>
+                                                            </ul>
+														</article>
+													</li>
+													<li>
+														<article class="box post-summary">
+															<h3><a href="#">Excel-2</a></h3>
+															<ul class="meta">
+																<li class="icon fa-clock">9 hours ago</li>
+															</ul>
+														</article>
+													</li>
+													<li>
+														<article class="box post-summary">
+															<h3><a href="#">Excel-3</a></h3>
+															<ul class="meta">
+																<li class="icon fa-clock">Yesterday</li>
+															</ul>
+														</article>
+													</li>
+												</ul>
+												<a href="{% url 'Read' %}" class="button alt">返回上传表格</a>
+											</section>
+
+										<!-- Something -->
+											<section>
+												<h2 class="major"><span>用户反馈可视化</span></h2>
+												<a href="{% url 'Visualize' %}" class="image featured"><img src="{% static 'pic03.jpg' %}" alt="" /></a>
+												<p>
+												在这一个部分，你可以通过平台进行对上传的excel表格的分析，生成词云、线型图、柱状图、饼状图等多种图表，用以多维度视角分析批量的用户反馈内容。
+                                                </p>
+												<a href="{% url 'Visualize' %}" class="button alt">前往生成可视化图表</a>
+											</section>
+
+								</div>
+							</div>
+							<div class="col-12">
+
+
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-12">
+
+								<!-- About -->
+									<section>
+										<h2 class="major"><span>系统使用说明</span></h2>
+										<p>
+											本系统包括 <strong>三个</strong>主要功能:上传excel表格、读取excel中的用户反馈内容并对用户反馈数目进行统计、对excel中的用户反馈内容进行可视化。
+                                            从banner处的入口可以进入相应的功能页面，请注意： <strong>使用系统的第一步应为上传excel表格</strong>，否则将无法进行后续步骤。
+										</p>
+									</section>
+
+							</div>
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section>
+										<h2 class="major"><span>作者信息</span></h2>
+										<p>数媒18-1 张涌琪 181002421</p>
+										<p>导师：卢昊</p>
+
+									</section>
+
+							</div>
+						</div>
+
+						<!-- Copyright -->
+							<div id="copyright">
+								<ul class="menu">
+									<li>Design & Develop: Yongqi</li>
+								</ul>
+							</div>
+
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'jquery.min.js' %}"></script>
+			<script src="{% static 'jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'browser.min.js' %}"></script>
+			<script src="{% static 'breakpoints.min.js' %}"></script>
+			<script src="{% static 'util.js' %}"></script>
+			<script src="{% static 'main.js' %}"></script>
+
+	</body>
+</html>

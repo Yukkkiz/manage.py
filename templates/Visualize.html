@@ -1,0 +1,172 @@
+{% load static%}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>长视频平台用户反馈分析平台-用户反馈可视化</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'main.css'%}" />
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="logo container">
+						<div>
+							<h1><a href="{% url 'index' %}" id="logo">BJFU</a></h1>
+							<p>长视频平台用户反馈分析平台</p>
+						</div>
+					</div>
+				</header>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'Read' %}">上传表格</a></li>
+						<li><a href="{% url 'Count' %}">用户反馈数目统计</a></li>
+						<li class="current"><a href="{% url 'Visualize' %}">用户反馈可视化</a></li>
+					</ul>
+				</nav>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="content">
+
+									<!-- Content -->
+
+										<article class="box page-content">
+
+											<header>
+												<h2>用户反馈可视化</h2>
+												<p>Visualisation of user feedback</p>
+											</header>
+										</article>
+
+								</div>
+							</div>
+							<div class="col-12">
+
+								<!-- Features -->
+									<section class="box features">
+										<div>
+											<div class="row">
+												<div class="col-3 col-6-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<a href="#" class="image featured"><img src="{% static 'pic01.jpg' %}" alt="" /></a>
+															<h3><a href="#">词云</a></h3>
+															<p>
+																使用本功能，可以筛选出用户反馈表格中提及频率最高的反馈问题，并将问题以词云方式呈现为图片。
+                                                            </p>
+                                                            <p></p>
+                                                            <p></p>
+                                                            <p></p>
+                                                            <li><a href="#" class="button alt large">生成词云</a></li>
+														</section>
+
+												</div>
+												<div class="col-3 col-6-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<a href="#" class="image featured"><img src="{% static 'pic02.jpg' %}" alt="" /></a>
+															<h3><a href="#">线型图</a></h3>
+                                                            <p>
+                                                                本功能可以绘制指定词语在表格时间周期内的反馈变化线型图，你可以借助这种图表来分析反馈的长期趋势。
+                                                            </p>
+                                                            <p></p>
+
+                                                            <li><a href="#" class="button large">生成线型图</a></li>
+														</section>
+
+												</div>
+												<div class="col-3 col-6-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<a href="#" class="image featured"><img src="{% static 'pic03.jpg' %}" alt="" /></a>
+															<h3><a href="#">柱状图</a></h3>
+															<p>
+																绘制top4主题的反馈在时间周期内的数量柱状图，这种图表可以用来分析哪些是困扰用户的主要问题。
+															</p>
+                                                            <li><a href="#" class="button alt large">生成柱状图</a></li>
+														</section>
+
+												</div>
+												<div class="col-3 col-6-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<a href="#" class="image featured"><img src="{% static 'pic04.jpg' %}" alt="" /></a>
+															<h3><a href="#">饼状图</a></h3>
+															<p>
+																绘制表格内所有与[错误码]相关反馈数量的饼状图，这种图表可以用来分析平台错误码出现的问题分布。
+															</p>
+                                                            <li><a href="#" class="button large">生成饼状图</a></li>
+														</section>
+
+												</div>
+
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-12">
+
+								<!-- About -->
+									<section>
+										<h2 class="major"><span>系统使用说明</span></h2>
+										<p>
+											本系统包括 <strong>三个</strong>主要功能:上传excel表格、读取excel中的用户反馈内容并对用户反馈数目进行统计、对excel中的用户反馈内容进行可视化。
+                                            从banner处的入口可以进入相应的功能页面，请注意： <strong>使用系统的第一步应为上传excel表格</strong>，否则将无法进行后续步骤。
+										</p>
+									</section>
+
+							</div>
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section>
+										<h2 class="major"><span>作者信息</span></h2>
+										<p>数媒18-1 张涌琪 181002421</p>					
+										<p>导师：卢昊</p>
+									</section>
+							</div>
+						</div>
+					</div>
+						<!-- Copyright -->
+							<div id="copyright">
+								<ul class="menu">
+									<li>Design & Develop: Yongqi</li>
+								</ul>
+							</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'jquery.min.js' %}"></script>
+			<script src="{% static 'jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'browser.min.js' %}"></script>
+			<script src="{% static 'breakpoints.min.js' %}"></script>
+			<script src="{% static 'util.js' %}"></script>
+			<script src="{% static 'main.js' %}"></script>
+
+	</body>
+</html>
